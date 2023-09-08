@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
+# Text Editor 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple text editor that runs Node.js in the browser/client-side, developed using React and web containers.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The editor is using Node.js version 16, but you can do everything that Node.js allows up to this version. You can create servers, download dependencies, all of this running on the client side.
 
-## Expanding the ESLint configuration
+If you want to add any other dependencies, simply place them in the package.json file located in the codeEditor.tsx file.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```javascript
+await webContainer.mount({
+        'index.js': {
+            file: {
+                contents: code
+            },
+        },
+        'package.json': {
+            file: {
+                contents: `
+                    {
+                        "name": "example-app",
+                        "type": "module",
+                        "dependencies": {
+                            "chalk": "latest"
+                        },
+                        "scripts": {
+                            "start": "node index.js"
+                        }
+                        
+                    }
+                `.trim()
+            }
+        }
+    })
+´´´
