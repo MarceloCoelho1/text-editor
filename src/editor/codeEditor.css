@@ -1,0 +1,45 @@
+.output {
+    background-color: #000;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    padding: 15px;
+    padding-top: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    
+}
+
+.output-terminal-header {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-terminal-header .language-name {
+    color: rgb(161 161 170);
+}
+
+.output::-webkit-scrollbar {
+    background: transparent;
+
+}
+
+.output::-webkit-scrollbar-thumb {
+    background-color: gray;
+
+    border-radius: 10px;
+    
+}
+
+.output-message {
+    color: rgb(161 161 170);
+    
+    
+}
+
+.runcode {
+    background-color: rgb(168 85 247);
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
