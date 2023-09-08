@@ -2,6 +2,9 @@
 
 A simple text editor that runs Node.js in the browser/client-side, developed using React and web containers.
 
+![text editor image](./public/Screenshot%20from%202023-09-08%2014-06-57.png)
+
+
 ## Overview
 
 The editor is using Node.js version 16, but you can do everything that Node.js allows up to this version. You can create servers, download dependencies, all of this running on the client side.
